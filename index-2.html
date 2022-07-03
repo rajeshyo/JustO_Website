@@ -44,9 +44,25 @@
 	</script>
 	<!-- End Twitter universal website tag code -->
 
+	<script>
+		function myFunction(id) {
+  //alert(text);
+  var popup = document.getElementById(id);
+  popup.classList.toggle("show");
+}
+		</script>
+
 	<style>
+
+		.whyusimg{
+			height: 143px;
+    		width: 239px;
+		}
 		.tooltip-wrap {
 			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 
 		.tooltip-wrap .tooltip-content {
@@ -128,6 +144,66 @@ height: 43vh; */
 			text-align: justify;
 		}
 	</style>
+
+<style>
+	/* Popup container - can be anything you want */
+	.popup {
+	  position: relative;
+	  display: inline-block;
+	  cursor: pointer;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	}
+	
+	/* The actual popup */
+	.popup .popuptext {
+		visibility: hidden;
+		width: 300px;
+		background-color: #555;
+		color: #fff;
+		border-radius: 6px;
+		padding: 8px 8px;
+		position: absolute;
+		z-index: 1;
+		bottom: 125%;
+		margin-left: -80px;
+		font-size: 9px;
+		left: -34px;
+		text-align: initial;
+	}
+	
+	/* Popup arrow */
+	.popup .popuptext::after {
+	  content: "";
+	  position: absolute;
+	  top: 100%;
+	  left: 50%;
+	  margin-left: -5px;
+	  border-width: 5px;
+	  border-style: solid;
+	  border-color: #555 transparent transparent transparent;
+	}
+	
+	/* Toggle this class - hide and show the popup */
+	.popup .show {
+	  visibility: visible;
+	  -webkit-animation: fadeIn 1s;
+	  animation: fadeIn 1s;
+	}
+	
+	/* Add animation (fade in the popup) */
+	@-webkit-keyframes fadeIn {
+	  from {opacity: 0;} 
+	  to {opacity: 1;}
+	}
+	
+	@keyframes fadeIn {
+	  from {opacity: 0;}
+	  to {opacity:1 ;}
+	}
+	</style>
 </head>
 
 
@@ -187,10 +263,21 @@ height: 43vh; */
 								under one roof without any constraint for Space and Inventory which will enable them to
 								compete with any large format Retailers.</p>
 							<br />
-							<h3>Best Price </h3>
-							<h3>Wide Range of Virtual Inventory </h3>
-							<h3>TAT Time </h3>
-							<h3>Secure Payment Gateways </h3>
+							<h3>Best Price 
+								<img src="img/whyus/whyus1.png" class="whyusimg" alt="">
+							</h3>
+							<h3>Wide Range of Virtual Inventory
+								<img src="img/whyus/whyus2.png" class="whyusimg"  alt=""> </h3>
+							<h3>TAT Time 
+								<img src="img/whyus/whyus3.png" class="whyusimg"  alt="">
+							</h3>
+							<h3>Secure Payment Gateways 
+								<img src="img/whyus/whyus4.png" class="whyusimg"  alt="">
+							</h3>
+
+						
+							  
+							
 
 						</div><!-- .site-branding -->
 						<div class="site-branding">
@@ -485,8 +572,8 @@ height: 43vh; */
 								<center class="centerCont">
 									<div class="tooltip-wrap">
 										<img class="profImg" src="img/team/team1.png" alt="Biz">
-										<h6>Kalpesh Vaza </h6>
-										<h6 style="margin-top: -28px;">(Co-Founder , Director & Advisory Chairman)</h6>
+										<span>Kalpesh Vaza </span>
+										<span >(Co-Founder , Director & Advisory Chairman)</span>
 										<!-- <p class="para">A Senior IT professional with expertise in Program and Product development areas across multiple domains. With 18+ Years of Industry experience of which the last 5 years have been in managing large enterprise engagements.
 
 						Managed projects with a team size of 10-500+ members.Managed Peak portfolio of 500+ team members and portfolio revenues in the range of 1.5 million USD to 7 millionUSD.
@@ -494,8 +581,9 @@ height: 43vh; */
 						</p> -->
 
 										<!-- <img src="/some/image/file.jpg" alt="Some Image" /> -->
-										<div class="tooltip-content">
-											A Senior IT professional with expertise in Program and Product development
+										<div class="popup" onclick="myFunction('myPopup')">See More
+											<span class="popuptext" id="myPopup">
+												A Senior IT professional with expertise in Program and Product development
 											areas across multiple domains. With 18+ Years of Industry experience of
 											which the last 5 years have been in managing large enterprise engagements.
 											Managed projects with a team size of 10-500+ members.Managed Peak portfolio
@@ -504,8 +592,13 @@ height: 43vh; */
 											Specialties: Implementation of Sitecore CMS, Sitecore commerce, habitat and
 											helix principal, Sitecore mobile app development, Sitecore integration with
 											third party.
+											</span>
+										  </div>
 
-										</div>
+										<!-- <div class="tooltip-content">
+											
+
+										</div> -->
 									</div>
 								</center>
 							</div>
@@ -514,11 +607,11 @@ height: 43vh; */
 								<center class="centerCont">
 									<div class="tooltip-wrap">
 									<img class="profImg" src="img/team/team2.png" alt="Biz">
-									<h6>Binod Pawar V.Y. </h6>
-									<h6 style="margin-top: -25px;">(Co-Founder, Director & CEO)</h6>
-								
-									<div class="tooltip-content">
-										A strategic planner who has proven track record to exceed targets through hard
+									<span>Binod Pawar V.Y. </span>
+									<span >(Co-Founder, Director & CEO)</span>
+									<div class="popup" onclick="myFunction('myPopup1')">See More
+										<span class="popuptext" id="myPopup1">
+											A strategic planner who has proven track record to exceed targets through hard
 										work, dedication and a commitment to the task at hand
 										Ability to build strong relationships both internally and externally ensuring
 										both customer and business needs are met
@@ -527,8 +620,9 @@ height: 43vh; */
 										relationships and gaining trust.
 										Worked with brands like ONIDA, TCL, VIDEOCON GROUP, HAIER & ARZOOO at various
 										levels,
-
-									</div>
+										</span>
+									  </div>
+									
 								</div>
 								</center>
 							</div>
@@ -538,11 +632,11 @@ height: 43vh; */
 								<center class="centerCont">
 									<div class="tooltip-wrap">
 									<img class="profImg" src="img/team/team3.png" alt="Biz">
-									<h6>Manish Ramanan</h6>
-									<h5 style="margin-top: -25px;">CTO</h5>
-								
-									<div class="tooltip-content">
-										Seasoned Hands-On Entrepreneurial, strategic thinker, and Software Architect
+									<span>Manish Ramanan</span>
+									<span>CTO</span>
+									<div class="popup" onclick="myFunction('myPopup2')">See More
+										<span class="popuptext" id="myPopup2">
+											Seasoned Hands-On Entrepreneurial, strategic thinker, and Software Architect
 										with 19 years in successfully designing, building, and completing innovative
 										business and technology solutions with an acute focus on
 										user experience. Exemplary leadership, problem-solving, team building,
@@ -550,8 +644,9 @@ height: 43vh; */
 										Discernment to learn from experience and mentor others along the way.
 										Accomplished victorious projects for Daimler, JP Morgan Chase, ICICI Bank, TVS
 										Motors, and many other clients.
-
-									</div>
+										</span>
+									  </div>
+								
 								</div>
 								</center>
 
@@ -566,16 +661,16 @@ height: 43vh; */
 								<center class="centerCont">
 									<div class="tooltip-wrap">
 									<img class="profImg" src="img/team/team4.png" alt="Biz">
-									<h6>Pavithra Shetty</h6>
-									<h5 style="margin-top: -25px;">Operations Head</h5>
-								
-									<div class="tooltip-content">
-										Having 12+ years’ experience in Various Sectors Like Hospitality & Education
+									<span>Pavithra Shetty</span>
+									<span>Operations</span>
+									<div class="popup" onclick="myFunction('myPopup3')">See More
+										<span class="popuptext" id="myPopup3">
+											Having 12+ years’ experience in Various Sectors Like Hospitality & Education
 										industry at Various Levels, Here in JustO will be Heading Operations - Order and
 										Process Management (Justo Mobile App & CRM) Registrations and activations
 										Management Analysis& Human Resource.
-
-									</div>
+										</span>
+									  </div>
 								</div>
 								</center>
 							</div>
@@ -584,16 +679,16 @@ height: 43vh; */
 								<center class="centerCont">
 									<div class="tooltip-wrap">
 									<img class="profImg" src="img/team/team5.png" alt="Biz">
-									<h6>Promod</h6>
-									<h5 style="margin-top: -25px;">(Category & Business Analyst)</h5>
-								
-									<div class="tooltip-content">
-										Having 17+ years’ experience in Electronics & Consumer Durable Industrywith
+									<span>Promod</span>
+									<span>(Category & Business Analyst)</span>
+									<div class="popup" onclick="myFunction('myPopup4')">See More
+										<span class="popuptext" id="myPopup4">
+											Having 17+ years’ experience in Electronics & Consumer Durable Industrywith
 										Major Brands Like Onida, TCL, Panasonic & Impex at Various Levels, Here in JustO
 										will be Heading All Categories- Category Management & Vendor Management
 										-Business and Gap Analysis.
-
-									</div>
+										</span>
+									  </div>
 									</div>
 								</center>
 							</div>
@@ -602,16 +697,16 @@ height: 43vh; */
 								<center class="centerCont">
 									<div class="tooltip-wrap">
 									<img class="profImg" src="img/team/team6.png" alt="Biz">
-									<h6>Ravi Kelaskar</h6>
-									<h5 style="margin-top: -25px;">CRM</h5>
-								
-									<div class="tooltip-content">
-										Having 18+ years’ experience in Electronics & Consumer Durable Industrywith
+									<span>Ravi Kelaskar</span>
+									<span>CRM</span>
+									<div class="popup" onclick="myFunction('myPopup5')">See More
+										<span class="popuptext" id="myPopup5">
+											Having 18+ years’ experience in Electronics & Consumer Durable Industrywith
 										Major Brands Like Samsung, Onida&Metro Cash & carryat Various Levels, Here in
 										JustO will be Heading Customer Relationship Management-Customer Communication
 										&Retention-Administration Management&Logistics Management.
-
-									</div>
+										</span>
+									  </div>
 									</div>
 								</center>
 							</div>
@@ -626,16 +721,16 @@ height: 43vh; */
 									<div class="tooltip-wrap">
 
 									<img class="profImg" src="img/team/team7.png" alt="Biz">
-									<h6>Subbaiah K.B </h6>
-									<h5 style="margin-top: -25px;">(Sales Head)</h5>
-								
-									<div class="tooltip-content">
-										Having 18+ years’ experience in Electronics & Consumer Durable Industrywith
+									<span>Subbaiah K.B </span>
+									<span>(Sales)</span>
+									<div class="popup" onclick="myFunction('myPopup6')">See More
+										<span class="popuptext" id="myPopup6">
+											Having 18+ years’ experience in Electronics & Consumer Durable Industrywith
 										Major Brands Like Samsung, Whirlpool&Onida at Various Levels, Here in JustO will
 										be Heading Sales –Channel Sales Management-Sales Team Management & Business
 										Development.
-
-									</div>
+										</span>
+									  </div>
 									</div>
 								</center>
 							</div>
@@ -645,16 +740,17 @@ height: 43vh; */
 									<div class="tooltip-wrap">
 
 									<img class="profImg" src="img/team/team8.png" alt="Biz">
-									<h6>Jai Singh </h6>
-									<h5 style="margin-top: -25px;">(Corporate Sales)</h5>
-								
-									<div class="tooltip-content">
-										Having 18+ years’ experience in Retail Electronics & Consumer Durable Industry
+									<span>Jai Singh </span>
+									<span>(Corporate Sales)</span>
+									<div class="popup" onclick="myFunction('myPopup7')">See More
+										<span class="popuptext" id="myPopup7">
+											Having 18+ years’ experience in Retail Electronics & Consumer Durable Industry
 										with Major Brands Like Thomson, Onida & Haierat Various Retail Stores, Here in
 										JustO will be Heading Sales (B2C) – Corporate Sales-Direct Sales &BTL
 										Activities.
-
-									</div>
+										</span>
+									  </div>
+									
 									</div>
 								</center>
 							</div>
@@ -664,16 +760,16 @@ height: 43vh; */
 									<div class="tooltip-wrap">
 
 									<img class="profImg" src="img/team/team9.png" alt="Biz">
-									<h6>Sanil C.N. </h6>
-									<h5 style="margin-top: -25px;">(Priority Retail Stores)</h5>
-								
-									<div class="tooltip-content">
-										Having 6+ years’ experience in Retail Electronics & Consumer Durable Industry
+									<span>Sanil C.N. </span>
+									<span>(Priority Retail Stores)</span>
+									<div class="popup" onclick="myFunction('myPopup8')">See More
+										<span class="popuptext" id="myPopup8">
+											Having 6+ years’ experience in Retail Electronics & Consumer Durable Industry
 										with Major Brands Like SKTVC, Shubham Consumer Durables Pvt Ltd at Various
 										positions , Here in JustO will be Heading Priority Retail Stores Business ,
 										Franchise Network Expansion & Development.
-
-									</div>
+										</span>
+									  </div>
 									</div>
 								</center>
 							</div>
